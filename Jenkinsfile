@@ -5,6 +5,12 @@ pipeline {
     Dockerimage = "my-docker:20"
   }
   stages {
+    stage('print this step'){
+      steps {
+        sh "echo this is printed"
+      }
+    }
+    
     stage('Build Docker Image with Dockerfile') {
       steps {
         // Build the Docker image using the environment variable
