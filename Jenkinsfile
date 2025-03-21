@@ -2,8 +2,8 @@ pipeline {
   agent any
 
   environment {
-    Dockerimage = "my-docker"
-    dockertag = "21"
+    Dockerimage = "arijitanand/mytestimage"
+    dockertag = "22"
   }
   stages {
     stage('print this step'){
