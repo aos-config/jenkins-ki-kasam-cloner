@@ -6,9 +6,10 @@ pipeline {
     dockertag = "22"
   }
   stages {
-    stage('print this step'){
+    stage('installations of kubectl'){
       steps {
-        sh "echo the build will start in the next step"
+        curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+        sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
       }
     }
     
