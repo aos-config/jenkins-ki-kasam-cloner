@@ -28,6 +28,7 @@ pipeline {
       steps{
         sh "kubectl create -f deployment.yml"
       }
+      
     }
   }
 }
