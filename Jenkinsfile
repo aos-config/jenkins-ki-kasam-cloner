@@ -26,7 +26,8 @@ pipeline {
 
     stage('This is the kubernetes deployment: '){
       steps{
-        sh "kubectl create -f deployment.yml"
+        sh "/usr/local/bin/kubectl create -f deployment.yml"
+
       }
     }
   }
